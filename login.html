@@ -2,15 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        html {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .form-control label {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .form-control input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .login-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h2>Login to Admin Panel</h2>
-    <label for="password">Password:</label>
-    <input type="password" id="password">
-    <button onclick="authenticate()">Login</button>
+    <div class="login-container">
+        <h2>Login to Admin Panel</h2>
+        <div class="form-control">
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+        </div>
+        <button class="login-btn" onclick="authenticate()">Login</button>
+    </div>
 
     <script>
         function authenticate() {
