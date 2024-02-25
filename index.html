@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Head content goes here -->
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,7 +123,56 @@
             <a class="uk-button-text uk-text-decoration-none" href="#" uk-toggle="target: #buy-now-modal">Buy Now</a>
         </div>
         <!-- Repeat the above card for each product you want to list -->
-    </div>
-</section>
+      <div class="uk-margin-small-left uk-margin-xlarge-right uk-width-expand"> <!-- Change uk-margin-xlarge-left to uk-margin-small-left -->
+          <!-- Minecraft Alts Product -->
+          <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+              <h4>Minecraft Alts</h4>
+              <p>A selection of Minecraft accounts available for purchase.</p>
+              <a class="uk-button-text uk-text-decoration-none" href="#" uk-toggle="target: #minecraft-alts-modal">Learn More</a> <!-- Updated button style and attributes -->
+          </div>
+
+          <!-- Minecraft Alts Modal -->
+          <div id="minecraft-alts-modal" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                  <h2 class="uk-modal-title">Minecraft Alts</h2>
+                  <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+                      <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+                          <h4>Idiotkiller82</h4>
+                          <p>Rank: none</p>
+                          <p>Banned: no</p>
+                          <p>Price: $1.00</p>
+                          <a class="uk-button uk-button-primary" href="#">Buy Now</a>
+                      </div>
+                  </div>
+                  <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+                      <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+                          <h4>Luckylord</h4>
+                          <p>Rank: vip</p>
+                          <p>Banned: no</p>
+                          <p>Price: $2.00</p>
+                          <a class="uk-button uk-button-primary" href="#">Buy Now</a>
+                      </div>
+                  </div>
+                  <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+                      <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+                          <h4>M7MI2</h4>
+                          <p>Rank: none</p>
+                          <p>Banned: yes</p>
+                          <p>Price: $0.50</p>
+                          <a class="uk-button uk-button-primary" href="#">Buy Now</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <script>
+          function showMinecraftAlts() {
+              var modal = document.getElementById('minecraft-alts-modal');
+              var modalElement = UIkit.modal(modal);
+              modalElement.show();
+          }
+      </script>
+    </section>
 </body>
 </html>
