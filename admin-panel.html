@@ -2,18 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - ixvqx.xyz</title>
+    <title>Admin Panel</title>
+    <style>
+        html {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        body {
+            padding: 20px;
+        }
+        .admin-option {
+            margin-bottom: 20px;
+        }
+        .admin-option h2 {
+            margin-bottom: 10px;
+        }
+        .admin-option .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+        .admin-option .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Admin Panel</h1>
-    <!-- Add your admin panel content here -->
-    <ul>
-        <li><a href="#">Manage Users</a></li>
-        <li><a href="#">Manage Products</a></li>
-        <li><a href="#">View Reports</a></li>
-        <!-- Add more options as needed -->
-    </ul>
+    <div class="admin-option">
+        <h2>Notes</h2>
+        <a href="notes.html" class="btn">Manage Notes</a>
+    </div>
+    <div class="admin-option">
+        <h2>Minecraft Alts</h2>
+        <a href="minecraft-alts.html" class="btn">Manage Minecraft Alts</a>
+    </div>
 </body>
 </html>
