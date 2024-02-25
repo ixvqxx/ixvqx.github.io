@@ -8,10 +8,20 @@
 </head>
 <body>
     <h2>Login to Admin Panel</h2>
-    <form action="admin-panel.php" method="POST">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <button type="submit">Login</button>
-    </form>
+    <label for="password">Password:</label>
+    <input type="password" id="password">
+    <button onclick="authenticate()">Login</button>
+
+    <script>
+        function authenticate() {
+            var password = document.getElementById("password").value;
+            // Replace 'your_password' with your actual password
+            if (password === 'your_password') {
+                window.location.href = "admin-panel.html"; // Redirect to admin panel on successful login
+            } else {
+                alert("Incorrect password. Please try again."); // Display error message
+            }
+        }
+    </script>
 </body>
 </html>
