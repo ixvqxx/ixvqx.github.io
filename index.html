@@ -258,12 +258,13 @@
               <a class="uk-button-text uk-text-decoration-none" href="#" uk-toggle="target: #minecraft-alts-modal">Learn More</a> <!-- Updated button style and attributes -->
           </div>
 
-          <!-- Minecraft Alts Modal -->
-          <div id="minecraft-alts-modal" uk-modal>
-              <div class="uk-modal-dialog uk-modal-body">
-                  <h2 class="uk-modal-title">Minecraft Alts</h2>
-                  <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
-                      <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+      <!-- Minecraft Alts Modal -->
+      <div id="minecraft-alts-modal" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body">
+              <h2 class="uk-modal-title">Minecraft Alts</h2>
+              <div class="uk-grid uk-child-width-1-3@m" uk-grid>
+                  <div>
+                      <div class="uk-card uk-card-secondary uk-card-body">
                           <h4>Idiotkiller82</h4>
                           <p>Rank: none</p>
                           <p>Banned: no</p>
@@ -271,8 +272,8 @@
                           <a class="uk-button uk-button-primary" href="#">Buy Now</a>
                       </div>
                   </div>
-                  <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
-                      <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+                  <div>
+                      <div class="uk-card uk-card-secondary uk-card-body">
                           <h4>Luckylord</h4>
                           <p>Rank: vip</p>
                           <p>Banned: no</p>
@@ -280,8 +281,8 @@
                           <a class="uk-button uk-button-primary" href="#">Buy Now</a>
                       </div>
                   </div>
-                  <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
-                      <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+                  <div>
+                      <div class="uk-card uk-card-secondary uk-card-body">
                           <h4>M7MI2</h4>
                           <p>Rank: none</p>
                           <p>Banned: yes</p>
@@ -293,13 +294,13 @@
           </div>
       </div>
 
-      <script>
-          function showMinecraftAlts() {
-              var modal = document.getElementById('minecraft-alts-modal');
-              var modalElement = UIkit.modal(modal);
-              modalElement.show();
-          }
-      </script>
+        <script>
+            function showMinecraftAlts() {
+                var modal = document.getElementById('minecraft-alts-modal');
+                var modalElement = UIkit.modal(modal);
+                modalElement.show();
+            }
+        </script>
     </section>
 </body>
 </html>
