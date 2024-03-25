@@ -1,84 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>crckz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.gg/lunars</title>
+  <style>
+    /* Background */
+    body {
+      background-color: #111;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-<!-- Open Graph Protocol (OGP) Tags -->
-<meta property="og:title" content="crckz">
-<meta property="og:description" content="owner of lunar solutions (gg/lunars)">
-<meta property="og:image" content="https://images-ext-1.discordapp.net/external/2Xql7Imwc2-M8eTpCpiHgXGX79a8inESMNA2RZvPwVk/%3Fsize%3D4096/https/cdn.discordapp.com/guilds/1120711931670577203/users/1177497949601812512/avatars/7cbe458810b37bed65bd1a99645e326c.png?format=webp&quality=lossless">
-<meta property="og:url" content="https://ixvqx.xyz/">
-<!-- End of OGP Tags -->
+    .button {
+      --bezier: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --edge-light: hsla(0, 0%, 50%, 0.8);
+      --text-light: rgba(255, 255, 255, 0.4);
+      --back-color: 240, 40%;
 
-<style>
-  body {
-    background-color: black;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+      cursor: pointer;
+      padding: 0.7em 1em;
+      border-radius: 0.5em;
+      min-height: 2.4em;
+      min-width: 3em;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
 
-  button {
-    --glow-color: rgb(217, 176, 255);
-    --glow-spread-color: rgba(191, 123, 255, 0.781);
-    --enhanced-glow-color: rgb(231, 206, 255);
-    --btn-color: rgb(100, 61, 136);
-    border: .25em solid var(--glow-color);
-    padding: 1em 3em;
-    color: var(--glow-color);
-    font-size: 15px;
-    font-weight: bold;
-    background-color: var(--btn-color);
-    border-radius: 1em;
-    outline: none;
-    box-shadow: 0 0 1em .25em var(--glow-color),
-                0 0 4em 1em var(--glow-spread-color),
-                inset 0 0 .75em .25em var(--glow-color);
-    text-shadow: 0 0 .5em var(--glow-color);
-    position: relative;
-    transition: all 0.3s;
-  }
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      font-weight: bold;
 
-  button::after {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    top: 120%;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--glow-spread-color);
-    filter: blur(2em);
-    opacity: .7;
-    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
-  }
+      background: linear-gradient(
+        140deg,
+        hsla(var(--back-color), 50%, 1) min(2em, 20%),
+        hsla(var(--back-color), 50%, 0.6) min(8em, 100%)
+      );
+      color: hsla(0, 0%, 90%);
+      border: 0;
+      box-shadow: inset 0.4px 1px 4px var(--edge-light);
 
-  button:hover {
-    color: var(--btn-color);
-    background-color: var(--glow-color);
-    box-shadow: 0 0 1em .25em var(--glow-color),
-                0 0 4em 2em var(--glow-spread-color),
-                inset 0 0 .75em .25em var(--glow-color);
-  }
+      transition: all 0.3s var(--bezier);
 
-  button:active {
-    box-shadow: 0 0 0.6em .25em var(--glow-color),
-                0 0 2.5em 2em var(--glow-spread-color),
-                inset 0 0 .5em .25em var(--glow-color);
-  }
-</style>
+      /* Scale button down to 2/3 of its original size */
+      transform: scale(0.67);
+    }
+
+    .button:hover {
+      --edge-light: hsla(0, 0%, 50%, 1);
+      text-shadow: 0px 0px 10px var(--text-light);
+      box-shadow: inset 0.4px 1px 8px var(--edge-light),
+        2px 4px 12px hsla(0, 0%, 0%, 0.295);
+      transform: scale(0.67); /* Keep button size constant on hover */
+    }
+
+    .button:active {
+      --text-light: rgba(255, 255, 255, 1);
+
+      background: linear-gradient(
+        140deg,
+        hsla(var(--back-color), 50%, 1) min(2em, 20%),
+        hsla(var(--back-color), 50%, 0.6) min(8em, 100%)
+      );
+      box-shadow: inset 0.4px 1px 12px var(--edge-light),
+        0px 0px 12px hsla(var(--back-color), 50%, 0.6);
+      text-shadow: 0px 0px 20px var(--text-light);
+      color: hsla(0, 0%, 100%, 1);
+      letter-spacing: 0.1em;
+      transform: scale(0.67); /* Keep button size constant on click */
+    }
+  </style>
 </head>
 <body>
 
-<button id="redirectButton">Enter now!</button>
+<div>
+  <button class="button" id="openFileButton">
+    <img src="https://media.discordapp.net/attachments/1218196182611001424/1221822101057437727/Untitled.png?ex=6613f981&is=66018481&hm=dd8ca18ad75dbf77a9de3927da1e05241c68c23a3df8935450b98616817056dc&=&format=webp&quality=lossless" alt="Gun Logo" height="32" width="32">
+    Enter now!
+  </button>
+</div>
 
 <script>
-  document.getElementById("redirectButton").addEventListener("click", function() {
-    window.location.href = "https://guns.lol/xcz";
+  document.getElementById('openFileButton').addEventListener('click', function() {
+    window.location.href = 'loader.html';
   });
 </script>
 
